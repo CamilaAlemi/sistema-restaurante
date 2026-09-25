@@ -1,7 +1,10 @@
 import express from 'express';
 const routes = express.Router();
-import teste from './controllers/testControllers.js'
+import comidaC from './controllers/comidaController.js'
 
-routes.get("/", teste.test);
+routes.post("/pratos", comidaC.addComida);
+routes.get("/pratos", comidaC.getComidas);
+routes.put("/pratos/:id", comidaC.alterarComida);
+routes.delete("/pratos/:id", comidaC.deletarComida);
 
 export default routes;
