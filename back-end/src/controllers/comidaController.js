@@ -2,7 +2,7 @@ import comidaModel from '../models/comidaModel.js'
 
 const addComida = async (req, res)=>{
     const resposta = await comidaModel.addComida(req.body);
-    if(resposta == 1) return res.status(200).json({mensagem: "Deu certo"}); 
+    if(resposta == 1) return res.status(201).json({mensagem: "Deu certo"}); 
 }
 
 const getComidas = async (_req, res)=>{
@@ -13,7 +13,7 @@ const getComidas = async (_req, res)=>{
 const alterarComida = async (req, res)=>{
     const id = req.params.id;
     const resposta = await comidaModel.alterarComida(id, req.body);
-    if(resposta == 1) return res.status(201).json({mensagem: "Prato alterado com sucesso!"});
+    if(resposta == 1) return res.status(200).json({mensagem: "Prato alterado com sucesso!"});
 }
 
 const deletarComida = async (req, res)=>{
