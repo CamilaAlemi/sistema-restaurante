@@ -8,7 +8,10 @@ routes.get("/pratos", comidaC.getComidas);
 routes.put("/pratos/:id", comidaC.alterarComida);
 routes.delete("/pratos/:id", comidaC.deletarComida);
 
-routes.post("/cadastroF", funcC.cadastrar)
-routes.post("/loginF", funcC.login)
+routes.post("/cadastroF", funcC.cadastrar);
+routes.post("/loginF", funcC.login);
+routes.get("/funcionarios", funcC.mostrarFuncionarios);
+routes.put("/funcionarios/:id", funcC.alterarFuncionario)
+routes.delete("/funcionarios/:id", funcC.deletarFuncionario)
 
 export default routes;
